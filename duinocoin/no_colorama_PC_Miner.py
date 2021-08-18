@@ -339,7 +339,7 @@ def Greeting():
         " ‖ "
         + get_string("algorithm")
         + algorithm
-        + " ⚙ "
+        + "  "
         + diffName)
 
     if rig_identiier != "None":
@@ -836,7 +836,7 @@ def Thread(
                                     + " cpu"
                                     + str(threadid)
                                     + " "
-                                    + " ⛏"
+                                    + "  "
                                     + get_string("accepted")
                                     + str(int(accepted.value))
                                     + "/"
@@ -852,7 +852,7 @@ def Thread(
                                     + "s"
                                     + " ∙ "
                                     + str(formattedhashcount)
-                                    + " ⚙ diff "
+                                    + "   diff "
                                     + str(diff)
                                     + " ∙ "
                                     + "ping "
@@ -875,7 +875,7 @@ def Thread(
                                     + " cpu"
                                     + str(threadid)
                                     + " "
-                                    + " ⛏"
+                                    + "  "
                                     + get_string("block_found")
                                     + str(accepted.value)
                                     + "/"
@@ -891,7 +891,7 @@ def Thread(
                                     + "s"
                                     + " ∙ "
                                     + str(formattedhashcount)
-                                    + " ⚙ diff "
+                                    + "   diff "
                                     + str(diff)
                                     + " ∙ "
                                     + "ping "
@@ -930,7 +930,7 @@ def Thread(
                                     + "s"
                                     + " ∙ "
                                     + str(formattedhashcount)
-                                    + " ⚙ diff "
+                                    + "   diff "
                                     + str(diff)
                                     + " ∙ "
                                     + "ping "
@@ -993,7 +993,7 @@ def periodic_report(start_time,
                  + str(uptime), "success")
 
 
-def pretty_print(message_type, message, state):
+def pretty_print(message_type="", message="", state=""):
     print(state+" - "+message_type+" - "+message+" - ")
 
 
