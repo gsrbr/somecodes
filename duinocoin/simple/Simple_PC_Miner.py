@@ -236,7 +236,7 @@ def Greeting():
         greeting = "Welcome back"
 
     print(
-        " ‖ "
+        " | "
         + " Simple_PC_miner by gsrbr based on Official Duino-Coin Python Miner"
         + " (v"
         + str(MINER_VER)
@@ -244,11 +244,11 @@ def Greeting():
         + "2019-2021")
 
     print(
-        " ‖ "
+        " | "
         + "https://github.com/revoxhere/duino-coin")
 
     try:
-        print(" ‖ "
+        print(" | "
             + "CPU: "
             + str(threadcount)
             + "x "
@@ -260,7 +260,7 @@ def Greeting():
     #    print(
     #        Style.DIM
     #        + Fore.YELLOW
-    #        + " ‖ "
+    #        + " | "
     #        + Style.NORMAL
     #        + Fore.RESET
     #        + get_string("donation_level")
@@ -268,18 +268,18 @@ def Greeting():
     #        + Fore.YELLOW
     #        + str(donation_level))
 
-    print(" ‖ "
+    print(" | "
         + "Algorithm: "
         + algorithm
         + "  "
         + diffName)
 
     if rig_identiier != "None":
-        print(" ‖ "
+        print(" | "
             + "Rig identifier: "
             + rig_identiier)
 
-    print(" ‖ "
+    print(" | "
         + str(greeting)
         + ", "
         + str(username)
@@ -777,15 +777,15 @@ def Thread(
                                             / (accepted.value + rejected.value)
                                          * 100)))
                                     + "%)"
-                                    + " ∙ "
+                                    + " . "
                                     + str("%05.2f" % float(computetime))
                                     + "s"
-                                    + " ∙ "
+                                    + " . "
                                     + str(formattedhashcount)
 
                                     + " diff "
                                     + str(diff)
-                                    + " ∙ "
+                                    + " . "
                                     + "ping "
                                     + str("%02.0f" % int(ping))
                                     + "ms")
@@ -818,14 +818,14 @@ def Thread(
                                             / (accepted.value + rejected.value)
                                          * 100)))
                                     + "%)"
-                                    + " ∙ "
+                                    + " . "
                                     + str("%05.2f" % float(computetime))
                                     + "s"
-                                    + " ∙ "
+                                    + " . "
                                     + str(formattedhashcount)
                                     + " diff "
                                     + str(diff)
-                                    + " ∙ "
+                                    + " . "
                                     + "ping "
                                     + str("%02.0f" % int(ping))
                                     + "ms")
@@ -858,14 +858,14 @@ def Thread(
                                             / (accepted.value + rejected.value)
                                          * 100)))
                                     + "%)"
-                                    + " ∙ "
+                                    + " . "
                                     + str("%05.2f" % float(computetime))
                                     + "s"
-                                    + " ∙ "
+                                    + " . "
                                     + str(formattedhashcount)
-                                    + " ⚙ diff "
+                                    + " diff "
                                     + str(diff)
-                                    + " ∙ "
+                                    + " . "
                                     + "ping "
                                     + str("%02.0f" % int(ping))
                                     + "ms")
@@ -908,20 +908,20 @@ def periodic_report(start_time,
     pretty_print("sys0",
                  " "
                  + "Periodic mining report (BETA): "
-                 + "\n\t\t‖ During the last "
+                 + "\n\t\t| During the last "
                  + str(seconds)
                  + " seconds"
-                 + "\n\t\t‖ You've mined "
+                 + "\n\t\t| You've mined "
                  + str(shares)
                  + " shares ("
                  + str(round(shares/seconds, 1))
                  + " shares/s)"
-                 + "\n\t\t‖ With the hashrate of "
+                 + "\n\t\t| With the hashrate of "
                  + str(int(hashrate)) + " H/s"
-                 + "\n\t\t‖ In this time period, you've solved "
+                 + "\n\t\t| In this time period, you've solved "
                  + str(int(hashrate*seconds))
                  + " hashes"
-                 + "\n\t\t‖ Total miner uptime: "
+                 + "\n\t\t| Total miner uptime: "
                  + str(uptime), "success")
 
 
