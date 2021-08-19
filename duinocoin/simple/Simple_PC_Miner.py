@@ -565,10 +565,17 @@ def Thread(
                     if "\n" in motd:
                         motd = motd.replace("\n", "\n\t\t")
 
-                    pretty_print("net" + str(threadid),
+                    try:
+                        pretty_print("net" + str(threadid),
+                                     " MOTD: "
+                                     + str(motd),
+                                     "success")
+                    except:
+                        pretty_print("net" + str(threadid),
                                  " MOTD: "
-                                 + str(motd),
+                                 + "Ops... I cant figure the MOTD",
                                  "success")
+                        
 
                 if threadid == 0:
                     if float(server_version) <= float(MINER_VER):
