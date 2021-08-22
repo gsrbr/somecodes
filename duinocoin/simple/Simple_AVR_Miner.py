@@ -109,19 +109,6 @@ mining_start_time = time()
 if not path.exists(RESOURCES_DIR):
     mkdir(RESOURCES_DIR)
 
-# Check if languages file exists
-if not Path(RESOURCES_DIR + '/langs.json').is_file():
-    url = ('https://raw.githubusercontent.com/'
-           + 'revoxhere/'
-           + 'duino-coin/master/Resources/'
-           + 'AVR_Miner_langs.json')
-    r = requests.get(url)
-    with open(RESOURCES_DIR + '/langs.json', 'wb') as f:
-        f.write(r.content)
-
-# Load language file
-with open(RESOURCES_DIR + '/langs.json', 'r', encoding='utf8') as lang_file:
-    lang_file = jsonload(lang_file)
 
 # OS X invalid locale hack
 if system() == 'Darwin':
@@ -480,10 +467,16 @@ def mine_avr(com, threadid):
                         if "\n" in motd:
                             motd = motd.replace("\n", "\n\t\t")
 
-                        pretty_print("net" + str(threadid),
-                                     " MOTD: "
-                                     + str(motd),
-                                     "success")
+                        try:
+                            pretty_print("net" + str(threadid),
+                                        " MOTD: "
+                                        + str(motd),
+                                        "success")
+                        except:
+                            pretty_print("net" + str(threadid),
+                                    " MOTD: "
+                                    + "Ops... I cant figure the MOTD",
+                                    "success")
                     break
                 except Exception as e:
                     pretty_print(
