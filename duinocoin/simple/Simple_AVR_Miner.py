@@ -810,7 +810,7 @@ def mine_avr(com, threadid):
                                 + ' usb'
                                 + str(''.join(filter(str.isdigit, com)))
                                 + ' '
-                                + ' ✗'
+                                + '  X '
                                 + " Rejected "
                                 + str(int(shares[0]))
                                 + '/'
